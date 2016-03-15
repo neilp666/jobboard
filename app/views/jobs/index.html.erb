@@ -1,1 +1,10 @@
-<h1>index.html.erb</h1>
+
+
+<% @jobs.each do |job| %>
+<h2><%= link_to job.title, job %>
+<p><%= job.company %></p>
+<% end %>
+
+
+<%= link_to "New Job", new_job_path %>
+
